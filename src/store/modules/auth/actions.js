@@ -13,14 +13,16 @@ export default {
       mode: 'signup',
     });
   },
+  
+  // I deleted keys in apis
   async auth(context, payload) {
     const mode = payload.mode;
     let url =
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA9ShpD_nhrjmaBzL2ljq0b0_h7jX_zR4Y';
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=';
 
     if (mode === 'signup') {
       url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA9ShpD_nhrjmaBzL2ljq0b0_h7jX_zR4Y';
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=';
     }
     const response = await fetch(url, {
       method: 'POST',
